@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HarcamaEkleFragment">
+    <TextView
+        android:id="@+id/textViewHarcamaEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/harcama_ekle"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAciklama"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:autofillHints="true"
+        android:background="@drawable/giris_button_background"
+        android:hint="@string/aciklama"
+        android:inputType="text"
+        android:maxLength="24"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp"
+        android:singleLine="true"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHarcamaEkle" />
+
+    <EditText
+        android:id="@+id/editTextHarcamaMiktari"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:autofillHints="true"
+        android:background="@drawable/giris_button_background"
+        android:hint="@string/harcama_tutari"
+        android:inputType="numberDecimal"
+        android:maxLength="24"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="15dp"
+        android:singleLine="true"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAciklama" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupHarcamaTurleri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextHarcamaMiktari"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHarcamaMiktari">
+
+        <RadioButton
+            android:id="@+id/radioButtonFatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@drawable/radio_button_clicked"
+            android:text="@string/fatura"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonKira"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@drawable/radio_button_clicked"
+            android:text="@string/kira"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDiger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@drawable/radio_button_clicked"
+            android:text="@string/diger"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupParaCinsleri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupHarcamaTurleri">
+
+        <RadioButton
+            android:id="@+id/radioButtonTl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:buttonTint="@drawable/radio_button_clicked"
+            android:text="@string/tl"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSterlin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:buttonTint="@drawable/radio_button_clicked"
+            android:text="@string/sterlin_kucuk"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:buttonTint="@drawable/radio_button_clicked"
+            android:text="@string/dolar"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:buttonTint="@drawable/radio_button_clicked"
+            android:text="@string/euro"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonEkleHarcama"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/giris_button_background"
+        android:backgroundTint="@color/black"
+        android:text="@string/ekle"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroupParaCinsleri"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupParaCinsleri" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
